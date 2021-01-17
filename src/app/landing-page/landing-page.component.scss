@@ -1,0 +1,84 @@
+// src/app/landing-page/landing-page.component.scss
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-page {
+  height: 100vh;
+  width: 100%;
+
+  .welcome {
+    position: absolute;
+    width: 100%;
+    @extend .flex-column;
+    align-items: center;
+  }
+
+  .greeting {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #ffffff60;
+    @extend .flex-column;
+  }
+
+  .message {
+    font-size: 1.5rem;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .landing-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: #ffffff60;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .social-icon {
+    color: #000000;
+
+    &:hover {
+      color: #3a3a3a;
+    }
+  }
+
+  @media screen and (min-width: 40rem) {
+    .welcome,
+    .footer {
+      position: relative;
+    }
+
+    .welcome {
+      height: 8rem;
+    }
+
+    .greeting {
+      background-color: transparent;
+    }
+
+    .landing-image {
+      clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+      height: calc(100% - 8rem - 8rem);
+    }
+
+    .footer {
+      height: 8rem;
+    }
+  }
+}
