@@ -58,19 +58,7 @@
 
   @media screen and (max-height: 30rem) {
     .landing-image {
-      height: calc(100% - 8rem);
-      clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
-
-      > img {
-        object-position: 0 -5rem;
-      }
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 0;
-      height: 3rem;
-      background-color: #ffffff60;
+      height: 100%;
     }
   }
 }
